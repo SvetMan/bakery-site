@@ -1,127 +1,153 @@
     html {
-        min-width: 600px;
-    }
-    
-    body,
-    footer,
+    min-width: 550px;
+}
+
+body,
+footer,
+header {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+    line-height: 1.8;
+    font-weight: 300;
+    background-color: black;
+}
+
+header,
+section {
+    padding: 0 5%;
+}
+
+header {
+    height: 90px;
+    background-color: rgb(20 20 21 / 61%);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+a {
+    justify-content: center;
+    color: beige;
+    margin: 1% 15%;
+    justify-content: space-around;
+    text-decoration: none;
+    font-weight: 400;
+    align-self: center;
+}
+
+a:hover {
+    color: rgb(168, 181, 80);
+}
+
+.logo {
+    display: flex;
+    background-size: cover;
+    background-image: url(img/kisspng-bakery-pizza-drawing-chef-baking-bread-5a9a894a4dd376.6108519715200771303188.png);
+    margin: 1%;
+    width: 19%;
+    height: 75px;
+    justify-content: flex-end;
+}
+
+.flex-ssylky {
+    display: flex;
+    justify-content: flex-end;
+    /* min-width: 650px; */
+}
+
+#block1 {
+    background: url(img/1648708037_12-gamerwall-pro-p-bulki-fon-krasivie-16.png);
+    height: 121vh;
+}
+
+section#block1 {
+    padding-top: 240px;
+}
+
+h1 {
+    display: grid;
+    justify-content: center;
+    color: antiquewhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2em;
+    line-height: 1.8;
+    font-weight: 600;
+}
+
+footer {
+    display: flex;
+    height: 190px;
+    width: 100%;
+    z-index: 1000;
+}
+
+ul {
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+    flex-direction: column;
+    margin: .5%;
+}
+
+.foo {
+    display: flex;
+    padding: 1% 15%;
+    width: 100%;
+    background-color: #c727272e;
+    color: rgb(168, 181, 80);
+    justify-content: space-around;
+}
+
+p {
+    align-self: center;
+}
+
+.icons {
+    display: flex;
+}
+
+.img123:hover,
+.img1234:hover {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.img123 {
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+.img1234 {
+    margin-top: 16%;
+    width: 46px;
+    height: 46px
+}
+
+.color_footer {
+    color: rgb(119, 148, 177);
+}
+
+@media all and (max-width: 920px) {
     header {
-        margin: 0;
-        font-family: "Poppins", Arial, sans-serif;
-        font-size: 16px;
-        overflow-x: hidden;
-        line-height: 1.8;
-        font-weight: 300;
-        background-color: black;
+        padding: 0;
     }
-    
-    header,
-    section {
-        padding: 0 5%;
-    }
-    
-    header {
-        height: 90px;
-        background-color: rgb(20 20 21 / 61%);
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-    }
-    
-    nav {
-        height: 90px;
-        display: flex;
-        justify-content: space-around;
-        margin: auto;
-    }
-    
-    a {
-        justify-content: center;
-        color: beige;
-        margin: 1% 15%;
-        justify-content: space-around;
-        text-decoration: none;
-        font-weight: 400;
-        align-self: center;
-    }
-    
-    a:hover {
-        color: rgb(168, 181, 80);
-    }
-    
     .logo {
-        display: flex;
-        background-size: cover;
-        background-image: url(img/kisspng-bakery-pizza-drawing-chef-baking-bread-5a9a894a4dd376.6108519715200771303188.png);
-        margin: 1%;
-        width: 19%;
-        height: 75px;
-        justify-content: flex-end;
+        display: none;
     }
-    
     .flex-ssylky {
-        display: flex;
-        justify-content: flex-end;
-        /* min-width: 650px; */
+        justify-content: center;
     }
-    
-    #block1 {
-        background: url(img/1648708037_12-gamerwall-pro-p-bulki-fon-krasivie-16.png);
-        height: 135vh;
-    }
-    
-    section#block1 {
-        padding-top: 145px;
-    }
-    
-    footer {
-        display: flex;
-        height: 190px;
-        width: 100%;
-        z-index: 1000;
-    }
-    
-    ul {
-        width: 100%;
-        display: flex;
-        text-decoration: none;
-        list-style-type: none;
-        flex-direction: column;
-        margin: .5%;
-    }
-    
-    .foo {
-        display: flex;
-        padding: 1% 15%;
-        width: 100%;
-        background-color: #c727272e;
-        color: rgb(168, 181, 80);
-        justify-content: space-around;
-    }
-    
-    .icons {
-        display: flex;
-    }
-    
-    .img123:hover,
-    .img1234:hover {
-        transform: scale(1.1);
-        transition: .5s;
-    }
-    
-    .img123 {
-        display: flex;
-        width: 50px;
-        height: 50px;
-    }
-    
-    .img1234 {
-        margin-top: 16%;
-        width: 46px;
-        height: 46px
-    }
-    
-    .color_footer {
-        color: rgb(119, 148, 177);
-    }
-    
-    @media all and (max-width: 810px) {}
+}
+
+@media all and (max-width: 700px) {}
