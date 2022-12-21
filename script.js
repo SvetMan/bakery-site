@@ -1,43 +1,16 @@
 "use strict";
-var theToggle = document.getElementById('toggle');
+$(document).ready(function() {
+    $(".nav").on("click", "a", function(event) {
+        // исключаем стандартную реакцию браузера
+        event.preventDefault();
 
-// based on Todd Motto functions
-// https://toddmotto.com/labs/reusable-js/
+        // получем идентификатор блока из атрибута href
+        var id = $(this).attr('href'),
 
-// hasClass
-function hasClass(elem, className) {
-    return new RegExp(' ' + className + ' ').test(' ' + elem.className + ' ');
-}
-// addClass
-function addClass(elem, className) {
-    if (!hasClass(elem, className)) {
-        elem.className += ' ' + className;
-    }
-}
-// removeClass
-function removeClass(elem, className) {
-    var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, ' ') + ' ';
-    if (hasClass(elem, className)) {
-        while (newClass.indexOf(' ' + className + ' ') >= 0) {
-            newClass = newClass.replace(' ' + className + ' ', ' ');
-        }
-        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    }
-}
-// toggleClass
-function toggleClass(elem, className) {
-    var newClass = ' ' + elem.className.replace(/[\t\r\n]/g, " ") + ' ';
-    if (hasClass(elem, className)) {
-        while (newClass.indexOf(" " + className + " ") >= 0) {
-            newClass = newClass.replace(" " + className + " ", " ");
-        }
-        elem.className = newClass.replace(/^\s+|\s+$/g, '');
-    } else {
-        elem.className += ' ' + className;
-    }
-}
+            // находим высоту, на которой расположен блок
+            top = $(id).offset().top;
 
-theToggle.onclick = function() {
-    toggleClass(this, 'on');
-    return false;
-}
+        // анимируем переход к блоку, время: 700 мс
+        $('body,html').animate({ scrollTop: top }, 700);
+    });
+});
