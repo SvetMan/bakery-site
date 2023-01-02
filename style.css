@@ -61,8 +61,7 @@ a:hover {
 .flex-ssylky {
     display: flex;
     justify-content: flex-end;
-    /* min-width: 650px; */
-}
+    }
 
 #block1 {
     background: url(img/1648708037_12-gamerwall-pro-p-bulki-fon-krasivie-16.png);
