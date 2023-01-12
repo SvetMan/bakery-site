@@ -10,7 +10,6 @@ $(document).ready(function() {
             // находим высоту, на которой расположен блок
             top = $(id).offset().top;
 
-        // анимируем переход к блоку, время: 700 мс
-        $('body,html').animate({ scrollTop: top }, 700);
+          $('body,html').animate({ scrollTop: top }, 700);
     });
 });
